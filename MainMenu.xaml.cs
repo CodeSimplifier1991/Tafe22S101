@@ -50,6 +50,16 @@ namespace Calculator
 		}
 		// END - Currency Conversion btn click handler
 
+
+		// START - Trip Calculator btn click handler
+		private void tripCalculatorBtn_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(TripCalculator), null);
+		}
+		// END - Trip Calculator btn click handler
+
+
+
 	}
 	// MainMenu
 }

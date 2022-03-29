@@ -70,10 +70,18 @@
 						x:Name="currencyBtn"
 						Content="Currency Calculator"
 						Click="currencyBtn_Click"/>
+
+					<!-- Trip Calculator button -->
+					<Button
+						x:Name="tripCalculatorBtn"
+						Content="Trip Calculator"
+						Click="tripCalculatorBtn_Click"/>
+					
 					<!--Exit Button-->
 					<Button
 						x:Name="exitBtn"
 						Content="Exit"/>
+					
 				</StackPanel>
 				<!--END - Stack Panel contains the buttons-->
 			</StackPanel>
