@@ -9,6 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+		<!--START - Main Stack panel covers the whole page-->
+		<StackPanel
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Background="White">
 
-    </Grid>
+			<TextBlock
+				Text="Mortgage Calculator"
+				Foreground="Black"
+				FontSize="25"/>
+		</StackPanel>
+		<!--END - Main Stack panel covers the whole page-->
+
+	</Grid>
 </Page>
