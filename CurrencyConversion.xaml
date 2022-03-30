@@ -9,13 +9,4 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 	
-
-	<Grid>
-		
-	</Grid>
-
-
-
-
-
 </Page>
