@@ -8,5 +8,197 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-	
+	<!--START - Styles-->
+	<Page.Resources>
+		<!--START - TextBlock Styles-->
+		<Style TargetType="TextBlock">
+			<Setter Property="FontSize" Value="35"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Foreground" Value="Black"/>
+		</Style>
+		<!--END - TextBlock Styles-->
+
+
+		<!--START - TextBox Styles-->
+		<Style TargetType="TextBox">
+			<Setter Property="Width" Value="200"/>
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="Background" Value="White"/>
+			<Setter Property="BorderBrush" Value="Gray"/>
+		</Style>
+		<!--END - TextBox Styles-->
+
+		<!--START - ComboBox Styles-->
+		<Style TargetType="ComboBox">
+			<Setter Property="Width" Value="200"/>
+			<Setter Property="Height" Value="35"/>
+			<Setter Property="Background" Value="White"/>
+			<Setter Property="BorderBrush" Value="Gray"/>
+		</Style>
+		<!--END - ComboBox Styles-->
+
+	</Page.Resources>
+	<!--END - Styles-->
+
+	<Grid>
+		<!--START - Main Stack Panel - Covers the whole screen-->
+		<StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="White"
+            Padding="10"
+            Orientation="Vertical">
+
+			<!--START - The header Text-->
+			<TextBlock
+                Text="Currency Conversion Calculator"
+                HorizontalAlignment="Center"/>
+			<!--END  - The header Text-->
+
+
+			<!--START - Stack Panel - Contains AMOUNT - FROM - TO -->
+			<StackPanel
+                Orientation="Horizontal">
+
+				<!--START - Stack Panel 1 - Amount Text & Box-->
+				<StackPanel
+                        Orientation="Vertical"
+                        Margin="10 0 0 0">
+
+					<!--Amount Text-->
+					<TextBlock
+                        Text="Amount$"
+                        FontSize="25"
+                        Margin="0 10 0 5"
+                        FontWeight="Normal"/>
+
+					<!--Amount Box-->
+					<TextBox
+                        x:Name="amountBox"/>
+
+				</StackPanel>
+				<!--END - Stack Panel 1 - Amount Text & Box-->
+
+				<!--START - Stack Panel 2 - From ComboBox-->
+				<StackPanel
+                        Orientation="Vertical"
+                        Margin="10 15 0 0">
+
+					<!--From Text-->
+					<TextBlock
+                        Text="From"
+                        FontSize="25"
+                        FontWeight="Normal"/>
+
+					<!--START - From ComboBox-->
+					<ComboBox
+                        PlaceholderText="Choose Your Currency">
+						<ComboBoxItem x:Name="us_dollar">USD - US Dollar</ComboBoxItem>
+						<ComboBoxItem x:Name="euro">EU - Euro</ComboBoxItem>
+						<ComboBoxItem x:Name="britich_pound">GBP - British Pound</ComboBoxItem>
+						<ComboBoxItem x:Name="indian_rupee">INR - Indian Rupee</ComboBoxItem>
+					</ComboBox>
+					<!--END - From ComboBox-->
+
+
+				</StackPanel>
+				<!--END - Stack Panel 2 - From ComboBox-->
+
+				<!--START - Stack Panel 3 - To ComboBox-->
+				<StackPanel
+                        Orientation="Vertical"
+                        Margin="10 15 0 0">
+
+					<!--To Text-->
+					<TextBlock
+                        Text="To"
+                        FontSize="25"
+                        FontWeight="Normal"/>
+
+					<!--START - To ComboBox-->
+					<ComboBox
+                        PlaceholderText="Choose Your Currency">
+						<ComboBoxItem x:Name="usDollar">USD - US Dollar</ComboBoxItem>
+						<ComboBoxItem x:Name="Euro">EU - Euro</ComboBoxItem>
+						<ComboBoxItem x:Name="britichPound">GBP - British Pound</ComboBoxItem>
+						<ComboBoxItem x:Name="indianRupee">INR - Indian Rupee</ComboBoxItem>
+					</ComboBox>
+					<!--END - To ComboBox-->
+
+
+				</StackPanel>
+				<!--END - Stack Panel 3 - To ComboBox-->
+
+			</StackPanel>
+			<!--END - Stack Panel - Contains AMOUNT - FROM - TO -->
+
+			<!--START - Stack Panel - Contains the conversion result-->
+			<StackPanel>
+
+				<!--START - Amount change FROM-->
+				<TextBlock
+                    x:Name="currencyChangeFrom"
+                    Text="$1000 US Dollars = "
+                    FontSize="10"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+				<!--END - Amount change FROM-->
+
+
+				<!--START - Amount change TO-->
+				<TextBlock
+                    x:Name="currencyChangeTo"
+                    Text="$728.24 British Pounds"
+                    FontSize="20"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+				<!--END - Amount change TO-->
+
+				<!--START - Rate 1-->
+				<TextBlock
+                    x:Name="rateFrom"
+                    Text="1 USD = 0.728 British Pounds"
+                    FontSize="10"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+				<!--END - Rate 1-->
+
+				<!--START - Rate 2-->
+				<TextBlock
+                    x:Name="rateTo"
+                    Text="1 British Pounds = 1.371 USD"
+                    FontSize="10"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+				<!--END - Rate 2-->
+
+			</StackPanel>
+			<!--END - Stack Panel - Contains the conversion result-->
+
+			<!--START - Conversion Button-->
+			<Button
+                x:Name="conversionBtn"
+                HorizontalAlignment="Center"
+                Content="Currency Conversion"
+                Background="LightGray"
+                Foreground="Black"
+                FontSize="25"
+                Margin="15"/>
+			<!--END - Conversion Button-->
+
+			<!--START - Exit Button-->
+			<Button
+                x:Name="exitBtn"
+                HorizontalAlignment="Center"
+                Content="Exit"
+                Background="LightGray"
+                Foreground="Black"
+                FontSize="25"
+                Margin="15"/>
+
+
+			<!--END - Exit Button-->
+		</StackPanel>
+		<!--END - Main Stack Panel - Covers the whole screen-->
+	</Grid>
 </Page>
