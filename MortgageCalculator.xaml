@@ -10,168 +10,194 @@
 
 	<!--START - Styles-->
 	<Page.Resources>
-		
-		<!--START - TextBlock Syle-->
+		<!--START - TextBlock Styles-->
 		<Style TargetType="TextBlock">
-			<Setter Property="FontSize" Value="18"/>
+			<Setter Property="FontSize" Value="35"/>
+			<Setter Property="FontWeight" Value="Bold"/>
 			<Setter Property="Foreground" Value="Black"/>
-			<Setter Property="Width" Value="200"/>
-			<Setter Property="Margin" Value="0 15 10 10"/>
 		</Style>
-		<!--END - TextBlock Syle-->
+		<!--END - TextBlock Styles-->
 
-		<!--START - TextBox Syle-->
+
+		<!--START - TextBox Styles-->
 		<Style TargetType="TextBox">
 			<Setter Property="Width" Value="200"/>
-			<Setter Property="Height" Value="30"/>
-			<Setter Property="Margin" Value="0 10 0 10"/>
+			<Setter Property="Height" Value="35"/>
+			<Setter Property="BorderBrush" Value="Gray"/>
 		</Style>
-		<!--END - TextBox Syle-->
+		<!--END - TextBox Styles-->
+
+		<!--START - ComboBox Styles-->
+		<Style TargetType="ComboBox">
+			<Setter Property="Width" Value="200"/>
+			<Setter Property="Height" Value="35"/>
+			<Setter Property="Background" Value="White"/>
+			<Setter Property="BorderBrush" Value="Gray"/>
+		</Style>
+		<!--END - ComboBox Styles-->
 
 	</Page.Resources>
 	<!--END - Styles-->
 
 	<Grid>
-		<!--START - Main Stack panel covers the whole page-->
+		<!--START - Main Stack Panel - Covers the whole screen-->
 		<StackPanel
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
-			Padding="15"
-			Background="White">
-
-			<!--START - Mortgage Calculator Text-->
-			<TextBlock
-				Text="Mortgage Calculator"
-				Width="auto"
-				Foreground="Black"
-				FontSize="35"
-				FontWeight="Bold"/>
-			<!--END - Mortgage Calculator Text-->
-
-			<!--START - Stack Panel contains all the inputs-->
-			<StackPanel
-				Margin="0 15 0 0">
-				
-				<!--START - 1st Stack panel contains the Principal Amount Text & Box-->
-				<StackPanel
-					Orientation="Horizontal">
-					<!--Text-->
-					<TextBlock
-						Text="Principal Borrow $"/>
-
-					<!--Box-->
-					<TextBox
-						x:Name="principalBarrowBox"/>
-					
-				</StackPanel>
-				<!--END - 1st Stack panel contains the Principal Amount Text & Box-->
-
-				
-				<!--START - 2nd Stack panel contains the Years of the loan Text & Box-->
-				<StackPanel
-					Orientation="Horizontal">
-					<!--Text-->
-					<TextBlock
-						Text="Years"/>
-
-					<!--Box-->
-					<TextBox
-						x:Name="yearOfLoanBox"/>
-
-				</StackPanel>
-				<!--END - 2nd Stack panel contains the Years of the loan Text & Box-->
-
-				
-				<!--START - 3rd Stack panel contains the Month of the loan Text & Box-->
-				<StackPanel
-					Orientation="Horizontal">
-					<!--Text-->
-					<TextBlock
-						Text="and Months"/>
-
-					<!--Box-->
-					<TextBox
-						x:Name="andMonthOfTheLoanBox"/>
-
-				</StackPanel>
-				<!--END - 3rd Stack panel contains the Month of the loan Text & Box-->
-
-
-				<!--START - 4th Stack panel contains the Yearly interest rate Text & Box-->
-				<StackPanel
-					Orientation="Horizontal">
-					<!--Text-->
-					<TextBlock
-						Text="Yearly Interest Rate"/>
-
-					<!--Box-->
-					<TextBox
-						x:Name="yearlyInterestRateBox"/>
-
-				</StackPanel>
-				<!--END - 4th Stack panel contains the Yearly interest rate Text & Box-->
-
-				
-				<!--START - 5th Stack panel contains the Monthly interest rate Text & Box-->
-				<StackPanel
-					Orientation="Horizontal">
-					<!--Text-->
-					<TextBlock
-						Text="Monthly Interest Rate"/>
-
-					<!--Box-->
-					<TextBox
-						x:Name="monthlyInterestRateBox"
-						IsReadOnly="True"/>
-
-				</StackPanel>
-				<!--END - 5th Stack panel contains the Monthly interest rate Text & Box-->
-
-				
-				<!--START - 6th Stack panel contains the Monthly Repayment Text & Box-->
-				<StackPanel
-					Orientation="Horizontal">
-					<!--Text-->
-					<TextBlock
-						Text="Monthly Repayment"/>
-
-					<!--Box-->
-					<TextBox
-						x:Name="monthlyRepaymentBox"
-						IsReadOnly="True"/>
-
-				</StackPanel>
-				<!--END - 6th Stack panel contains the Monthly Repayment Text & Box-->
-				
-			</StackPanel>
-			<!--END - Stack Panel contains all the inputs-->
-
-			<!--START - Calculate Button-->
-			<Button
-				x:Name="calculateBtn"
-				Content="Calculate"
-				Background="LightGray"
-				Foreground="Black"
-				HorizontalAlignment="Center"
-				Margin="0 20 0 0"
-				FontSize="25"
-				Click="calculateBtn_Click"/>
-			<!--END - Calculate Button-->
-
-			<!--START - Exit Button-->
-			<Button
-				x:Name="exitBtn"
-				Content="Exit"
-				Background="LightGray"
-				Foreground="Black"
-				HorizontalAlignment="Center"
-				Margin="0 20 0 0"
-				FontSize="20"
-				Click="exitBtn_Click"/>
-			<!--END - Exit Button-->
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Padding="15">
 			
-		</StackPanel>
-		<!--END - Main Stack panel covers the whole page-->
+			<!--START - The header Text-->
+			<TextBlock
+                Text="Currency Conversion Calculator"
+                HorizontalAlignment="Center"/>
+			<!--END  - The header Text-->
 
+			<!--START - Stack Panel contains the inputs-->
+			<StackPanel>
+				<!--START - Stack Panel - Contains AMOUNT - FROM - TO -->
+				<StackPanel
+                Orientation="Horizontal">
+
+					<!--START - Stack Panel 1 - Amount Text & Box-->
+					<StackPanel
+                        Orientation="Vertical"
+                        Margin="10 0 0 0">
+
+						<!--Amount Text-->
+						<TextBlock
+                        Text="Amount$"
+                        FontSize="25"
+                        Margin="0 10 0 5"
+                        FontWeight="Normal"/>
+
+						<!--Amount Box-->
+						<TextBox
+                        x:Name="amountBox"/>
+
+					</StackPanel>
+					<!--END - Stack Panel 1 - Amount Text & Box-->
+
+					<!--START - Stack Panel 2 - From ComboBox-->
+					<StackPanel
+                        Orientation="Vertical"
+                        Margin="10 15 0 0">
+
+						<!--From Text-->
+						<TextBlock
+                        Text="From"
+                        FontSize="25"
+                        FontWeight="Normal"/>
+
+						<!--START - From ComboBox-->
+						<ComboBox
+                        PlaceholderText="Choose Your Currency">
+							<ComboBoxItem x:Name="us_dollar">USD - US Dollar</ComboBoxItem>
+							<ComboBoxItem x:Name="euro">EU - Euro</ComboBoxItem>
+							<ComboBoxItem x:Name="britich_pound">GBP - British Pound</ComboBoxItem>
+							<ComboBoxItem x:Name="indian_rupee">INR - Indian Rupee</ComboBoxItem>
+						</ComboBox>
+						<!--END - From ComboBox-->
+
+
+					</StackPanel>
+					<!--END - Stack Panel 2 - From ComboBox-->
+
+					<!--START - Stack Panel 3 - To ComboBox-->
+					<StackPanel
+                        Orientation="Vertical"
+                        Margin="10 15 0 0">
+
+						<!--To Text-->
+						<TextBlock
+                        Text="To"
+                        FontSize="25"
+                        FontWeight="Normal"/>
+
+						<!--START - To ComboBox-->
+						<ComboBox
+                        PlaceholderText="Choose Your Currency">
+							<ComboBoxItem x:Name="usDollar">USD - US Dollar</ComboBoxItem>
+							<ComboBoxItem x:Name="Euro">EU - Euro</ComboBoxItem>
+							<ComboBoxItem x:Name="britichPound">GBP - British Pound</ComboBoxItem>
+							<ComboBoxItem x:Name="indianRupee">INR - Indian Rupee</ComboBoxItem>
+						</ComboBox>
+						<!--END - To ComboBox-->
+
+
+					</StackPanel>
+					<!--END - Stack Panel 3 - To ComboBox-->
+
+				</StackPanel>
+				<!--END - Stack Panel - Contains AMOUNT - FROM - TO -->
+
+				<!--START - Stack Panel - Contains the conversion result-->
+				<StackPanel>
+
+					<!--START - Amount change FROM-->
+					<TextBlock
+                    x:Name="currencyChangeFrom"
+                    Text="$1000 US Dollars = "
+                    FontSize="10"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+					<!--END - Amount change FROM-->
+
+
+					<!--START - Amount change TO-->
+					<TextBlock
+                    x:Name="currencyChangeTo"
+                    Text="$728.24 British Pounds"
+                    FontSize="20"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+					<!--END - Amount change TO-->
+
+					<!--START - Rate 1-->
+					<TextBlock
+                    x:Name="rateFrom"
+                    Text="1 USD = 0.728 British Pounds"
+                    FontSize="10"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+					<!--END - Rate 1-->
+
+					<!--START - Rate 2-->
+					<TextBlock
+                    x:Name="rateTo"
+                    Text="1 British Pounds = 1.371 USD"
+                    FontSize="10"
+                    FontWeight="Normal"
+                    Margin="0 20 0 0 "/>
+					<!--END - Rate 2-->
+
+				</StackPanel>
+				<!--END - Stack Panel - Contains the conversion result-->
+
+				<!--START - Conversion Button-->
+				<Button
+                x:Name="conversionBtn"
+                HorizontalAlignment="Center"
+                Content="Currency Conversion"
+                Background="LightGray"
+                Foreground="Black"
+                FontSize="25"
+                Margin="15"/>
+				<!--END - Conversion Button-->
+
+				<!--START - Exit Button-->
+				<Button
+                x:Name="exitBtn"
+                HorizontalAlignment="Center"
+                Content="Exit"
+                Background="LightGray"
+                Foreground="Black"
+                FontSize="25"
+                Margin="15"/>
+				<!--END - Exit Button-->
+			</StackPanel>
+			<!--END - Stack Panel contains the inputs-->
+
+		</StackPanel>
+		<!--END - Main Stack Panel - Covers the whole screen-->
 	</Grid>
 </Page>
