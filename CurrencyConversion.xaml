@@ -9,9 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
 
+=======
+>>>>>>> currencyCalculatorFeature
 	<!--START - Styles-->
 	<Page.Resources>
 		<!--START - TextBlock Styles-->
@@ -205,5 +208,8 @@
 		</StackPanel>
 		<!--END - Main Stack Panel - Covers the whole screen-->
 	</Grid>
+<<<<<<< HEAD
 >>>>>>> remotes/origin/currencyConversionFeature
+=======
+>>>>>>> currencyCalculatorFeature
 </Page>
